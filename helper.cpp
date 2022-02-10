@@ -1,6 +1,17 @@
 #include <iostream>
 #include <vector>
 
+void add_to_database(std::vector<int> &vec, int num) {
+    if (vec.size() < 20) {
+        vec.push_back(num);
+    } else if (vec.size() == 20) {
+        for (int i = 1; i < vec.size(); i++) {
+            vec[i - 1] = vec[i];
+        }
+        vec[vec.size() - 1] = num;
+    }
+}
+
 std::vector<int> add(std::vector<int> vec, int num) {
     std::vector<int> newVec(vec.size() + 1);
 
