@@ -1,4 +1,4 @@
-#include "Tasks.h"
+#include "../Tasks.h"
 
 void task1() {
     std::vector<int> list;

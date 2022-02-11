@@ -3,7 +3,9 @@
 
 #include "helper.cpp"
 
-void add(std::vector<int> vec, int num);
+void add_to_database(std::vector<int> &vec, int num);
+
+std::vector<int> add(std::vector<int> vec, int num);
 
 std::vector<int> add_to_position(std::vector<int> vec, int val, int position);
 

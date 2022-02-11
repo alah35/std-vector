@@ -1,4 +1,4 @@
-#include "Tasks.h";
+#include "../Tasks.h";
 
 void task3() {
     const int CAP = 20;

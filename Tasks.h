@@ -4,8 +4,8 @@
 #include <iostream>
 #include <vector>
 #include "helper.cpp"
-#include "Task1.cpp"
-#include "Task2.cpp"
-#include "Task3.cpp"
+#include "Tasks(HomeWork13)/Task1.cpp"
+#include "Tasks(HomeWork13)/Task2.cpp"
+#include "Tasks(HomeWork13)/Task3.cpp"
 
 #endif //STD_VECTOR_TASKS_H

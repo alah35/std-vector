@@ -1,4 +1,4 @@
-#include "Tasks.h"
+#include "../Tasks.h"
 
 void task2() {
     std::vector<float> prices = {2.5, 4.25, 3.0, 10.0};
