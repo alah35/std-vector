@@ -1,4 +1,4 @@
-#include "../Tasks.h";
+#include "../Tasks.h"
 
 void task3() {
     const int CAP = 20;
@@ -7,12 +7,19 @@ void task3() {
 
     int num = 0;
     while (num != -1) {
-        std::cout << "Enter element to add: ";
-        std::cin >> num;
-        if (num == -1) {
-            outputVector(database);
-            continue;
+        if (database.size() < CAP) {
+            std::cout << "Enter element to add: ";
+            std::cin >> num;
+            if (num == -1)
+                outputVector(database);
+            database.push_back(num);
+        } else if (database.size() >= CAP) {
+            std::cout << "Enter element to add: ";
+            std::cin >> num;
+            if (num == -1)
+                outputVector(database);
+            database.erase(database.begin());
+            database.push_back(num);
         }
-        add_to_database(database, num);
     }
 }
