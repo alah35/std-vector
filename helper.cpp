@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 
-void delete_element(std::vector<int> &vec, int val) {
+void delete_element(std::vector<int> &vec, int val) { // delete in vector all elements == val
     std::vector<int> newVec;
     newVec.reserve(vec.capacity());
 
