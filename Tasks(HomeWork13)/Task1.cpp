@@ -17,11 +17,7 @@ void task1() {
     std::cout << "Enter the number you want to delete: ";
     int delVal;
     std::cin >> delVal;
-    for (int i = 0; i <list.size(); ) {
-        if (delVal == list[i])
-            list = delete_from_position(list, i);
-        else
-            i++; // because delete_from_position returns vector without deleted elements
-    }
+    delete_element(list, delVal);
+
     outputVector(list);
 }

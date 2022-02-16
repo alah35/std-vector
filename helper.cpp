@@ -1,6 +1,17 @@
 #include <iostream>
 #include <vector>
 
+void delete_element(std::vector<int> &vec, int val) {
+    std::vector<int> newVec;
+    newVec.reserve(vec.capacity());
+
+    for (int i = 0; i < vec.size(); i++) {
+        if (vec[i] != val)
+        newVec.push_back(vec[i]);
+    }
+    vec = newVec;
+}
+
 void add_to_database(std::vector<int> &vec, int num) {
     if (vec.size() < 20) {
         vec.push_back(num);
@@ -60,13 +71,12 @@ std::vector<int> add_to_position(std::vector<int> vec, int val, int position) {
 
 std::vector <int> delete_from_position(std::vector<int> vec, int pos) {
 
-    std::vector <int> newVec(vec.size() - 1);
+    std::vector <int> newVec;
+    newVec.reserve(vec.capacity());
 
-    for (int i = 0; i < pos; i++) {
-        newVec[i] = vec[i];
-    }
-    for (int i = pos; i < newVec.size(); i++) {
-        newVec[i] = vec[i + 1];
+    for (int i = 0; i < vec.size(); i++) {
+        if (i != pos)
+            newVec.push_back(vec[i]);
     }
     return newVec;
 }

@@ -3,6 +3,8 @@
 
 #include "helper.cpp"
 
+void delete_element(std::vector<int> &vec, int val);
+
 void add_to_database(std::vector<int> &vec, int num);
 
 std::vector<int> add(std::vector<int> vec, int num);
