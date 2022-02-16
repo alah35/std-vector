@@ -17,13 +17,13 @@ void task3() {
     while (num != -1) {
         std::cout << "Enter element to add: ";
         std::cin >> num;
-        database[end % SIZE] = num;
-        ++end %= SIZE;
-        ++begin %= SIZE;
+        end %= SIZE; begin %= SIZE;
+        database[end] = num;
+        end++; begin++;
     }
 
-    for (int i = begin; i != end; ++i %= SIZE) {
-        if (i == end - 1)
+    for (int i = begin, j = 0; j < SIZE; ++i %= SIZE, j++) {
+        if (j == SIZE - 1)
             std::cout << database[i] << std::endl;
         else
             std::cout << database[i] << ", ";
