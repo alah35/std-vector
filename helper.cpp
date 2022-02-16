@@ -2,14 +2,12 @@
 #include <vector>
 
 void delete_element(std::vector<int> &vec, int val) { // delete in vector all elements == val
-    std::vector<int> newVec;
-    newVec.reserve(vec.capacity());
-
+    int j = 0;
     for (int i = 0; i < vec.size(); i++) {
         if (vec[i] != val)
-        newVec.push_back(vec[i]);
+            vec[j++] = vec[i];
     }
-    vec = newVec;
+    vec.resize(j);
 }
 
 void add_to_database(std::vector<int> &vec, int num) {
